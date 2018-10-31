@@ -134,9 +134,7 @@ def play(board)
   until over?(board) == true
     turn(board)
     over?(board)
-    break if won?(board) == true
-  end
-  if won?(board) == true
+  elsif won?(board) == true
     puts "Congratulations, '#{winner}'!"
   end
 end
