@@ -129,10 +129,10 @@ end
 
 #play method
 def play(board)
-  until over?(board) == false
+  while over?(board) == false
     turn(board)
     over?(board)
-  if won?(board) == true || draw?(board) == true
+  break if won?(board) == true || draw?(board) == true
   end
   if won?(board) == true
     puts "Congratulations, '#{winner}'!"
