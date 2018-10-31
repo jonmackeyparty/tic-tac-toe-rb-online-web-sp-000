@@ -70,7 +70,7 @@ end
 
 #current_player method 
 def current_player(board)
-  turn_count(board).even? == true ? "O" : "X"
+  turn_count(board).even? == true ? "X" : "O"
 end
 
 #won? method 
