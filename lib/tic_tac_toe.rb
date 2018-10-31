@@ -115,17 +115,15 @@ end
 
 #winner? method
 def winner(board)
-   index = []
-  index = won?(board)
-  if index == false
-    return nil
-  else
-    if board[index[0]] == "X"
-      return "X"
-    else
-      return "O"
-    end
+  winner = nil
+  WIN_COMBINATIONS.each do |combination|
+    if combination.all? {|token| board[token] == "X"}
+      winner = "X"
+    elsif combination.all? {|token| board[token] == "O"}
+      winner = "O"
+    end 
   end
+  winner
 end
 
 #play method
