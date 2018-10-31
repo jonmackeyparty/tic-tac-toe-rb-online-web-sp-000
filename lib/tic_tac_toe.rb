@@ -106,9 +106,7 @@ end
 
 #over? method 
 def over?(board)
-  if draw?(board) == true 
-    return true
-  elsif won?(board) == true
+  if won?(board) == true
     return true
   else
     return false
