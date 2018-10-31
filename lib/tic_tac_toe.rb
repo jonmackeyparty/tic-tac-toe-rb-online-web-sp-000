@@ -129,7 +129,7 @@ end
 
 #play method
 def play(board)
-  until over?(board) == false
+  while over?(board) == false
     turn(board)
   end
   if won?(board) == true
