@@ -115,15 +115,15 @@ end
 
 #winner? method
 def winner(board)
-  winner = nil
+  champion = nil
   WIN_COMBINATIONS.each do |combination|
     if combination.all? {|token| board[token] == "X"}
-      winner = "X"
+      champion = "X"
     elsif combination.all? {|token| board[token] == "O"}
-      winner = "O"
+      champion = "O"
     end 
   end
-  winner
+  champion
 end
 
 #play method
@@ -132,7 +132,7 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    puts "Congratulations #{winner} !"
+    puts "Congratulations #{champion} !"
   elsif draw?(board)
     puts "Cat's Game!"
   end
