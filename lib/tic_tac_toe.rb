@@ -131,10 +131,6 @@ end
 
 #play method
 def play(board)
-  turn(board)
-  over?(board)
-  turn(board)
-  over?(board)
   while over?(board) == false
     turn(board)
     over?(board)
