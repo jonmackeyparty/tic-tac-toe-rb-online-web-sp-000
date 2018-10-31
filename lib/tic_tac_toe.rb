@@ -53,6 +53,7 @@ def turn(board)
   if valid_move?(board,index) == true && position_taken?(board, index) == false
     move(board, index, value = current_player(board))
     display_board(board)
+  else turn(board)
   end
 end
 
