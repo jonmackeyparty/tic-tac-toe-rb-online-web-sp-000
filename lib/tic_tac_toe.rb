@@ -136,6 +136,9 @@ def play(board)
     over?(board)
   break if won?(board) == true || draw?(board) == true
   end
+  if draw?(board) == true
+    puts "Cat's Game!"
+  end
 end
     
   
