@@ -136,10 +136,8 @@ def play(board)
     over?(board)
   end
   if won?(board) == true
-    break
-    puts "Congratulations, '#{winner}'!"
+    puts "Congratulations, 'X'!"
   elsif draw?(board) == true
-    break
     puts "Cat's Game!"
   end
 end
