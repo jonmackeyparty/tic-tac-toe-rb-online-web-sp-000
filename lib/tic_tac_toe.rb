@@ -122,6 +122,7 @@ def winner(board)
     elsif combination.all? {|token| board[token] == "O"}
       winner = "O"
     else nil
+    end 
   end
   winner
 end
