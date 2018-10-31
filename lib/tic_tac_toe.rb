@@ -115,16 +115,7 @@ end
 
 #winner? method
 def winner(board)
-  winner = nil
-  WIN_COMBINATIONS.each do |combination|
-    if combination.all? {|token| board[token] == "X"}
-      winner = "X"
-    elsif combination.all? {|token| board[token] == "O"}
-      winner = "O"
-    end 
-  end
-  winner
-end
+  
 
 #play method
 def play(board)
