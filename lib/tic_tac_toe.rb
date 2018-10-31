@@ -131,14 +131,10 @@ end
 
 #play method
 def play(board)
-  until over?(board) == true
+  while over?(board) == false
     turn(board)
     over?(board)
-  end
-  if won?(board) == true
-    puts "Congratulations, 'X'!"
-  elsif draw?(board) == true
-    puts "Cat's Game!"
+  break if won?(board) == true || draw?(board) == true
   end
 end
     
